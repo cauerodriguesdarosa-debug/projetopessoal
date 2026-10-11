@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMORI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/images/omori_icon.gif" type="image/gif" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+<div class="intro-overlay cutscene-v61" id="introOverlay">
+  <div class="cs-stage" id="csStage"></div>
+</div>
+<div class="intro-film-grain" aria-hidden="true"></div>
+      <div class="intro-red-sweep intro-red-sweep-left" aria-hidden="true">
+        <img src="assets/images/redhands.webp" alt="" />
+      </div>
+      <div class="intro-red-sweep intro-red-sweep-right" aria-hidden="true">
+        <img src="assets/images/redhands.webp" alt="" />
+      </div>
+      <div class="intro-bulb-wrap" aria-hidden="true">
+        <span class="intro-cord"></span>
+        <img src="assets/images/lightbulb.webp" alt="" />
+      </div>
+      <img class="intro-mewo" src="assets/images/mewo.gif" alt="" aria-hidden="true" />
+      <img class="intro-something" src="assets/images/something.gif" alt="" aria-hidden="true" />
+      <img class="intro-mirror" src="assets/images/mirror_sprite.webp" alt="" aria-hidden="true" />
+      <div class="intro-flash intro-flash-one" aria-hidden="true"></div>
+      <div class="intro-flash intro-flash-two" aria-hidden="true"></div>
+      <div class="intro-iris" aria-hidden="true"></div>
+    </div>
+  </div>
+
+    <div class="intro-light" aria-hidden="true"></div>
+    <div class="intro-focus" aria-hidden="true"></div>
+  </div>
+
+
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="grain"></div>
+  <div class="cursor-light" id="cursorLight"></div>
+  <div class="rain-drops" aria-hidden="true"></div>
+  <div class="top-scroll-blur" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="nav-pill">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">OMORI</a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#personagens">Grupo</a>
+        <a href="#sistema">Sistema</a>
+        <a href="#mundos">Mundos</a>
+      </nav>
+
+
+    </div>
+
+    <button class="mewo-dock" id="mewoBtn" type="button" aria-label="Mewo">
+      <img src="assets/images/mewo.gif" alt="Mewo" />
+      <span id="mewoMessage">Esperando algo acontecer?</span>
+    </button>
+  </header>
+
+  <div class="vinyl-player" id="vinylPlayer" aria-label="Player de música">
+    <button class="vinyl-skip vinyl-prev" id="musicPrev" type="button" aria-label="Música anterior" title="Música anterior">⏮</button>
+
+    <button class="vinyl-disc" id="soundBtn" type="button" aria-label="Tocar ou pausar música" title="Tocar ou pausar música">
+      <span class="vinyl-groove vinyl-groove-a"></span>
+      <span class="vinyl-groove vinyl-groove-b"></span>
+      <span class="vinyl-label">OMORI</span>
+      <span class="vinyl-play" id="vinylPlayIcon">▶</span>
+    </button>
+
+    <button class="vinyl-skip vinyl-next" id="musicNext" type="button" aria-label="Próxima música" title="Próxima música">⏭</button>
+
+    <div class="now-playing" id="nowPlaying" aria-live="polite" hidden>
+      <span class="now-playing-label">Now playing:</span>
+      <span class="now-playing-title" id="musicCurrent"></span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero shell" id="inicio">
+      <div class="hero-copy" data-reveal>
+        <h1 id="mainOmoriTitle" class="main-omori-title omori-wave-title" aria-label="OMORI"><span class="omori-wave-letter" data-letter="O">O</span><span class="omori-wave-letter" data-letter="M">M</span><span class="omori-wave-letter" data-letter="O">O</span><span class="omori-wave-letter" data-letter="R">R</span><span class="omori-wave-letter" data-letter="I">I</span></h1>
+</div>
+    </section>
+
+    <section class="section shell about-section" id="sobre" data-reveal>
+      <div class="about-layout">
+        <div class="about-text">
+          <span class="tag">sobre</span>
+          <h2 class="soft-glitch-title">Sobre OMORI</h2>
+          <p>
+            OMORI é um RPG indie de terror psicológico que articula amizade, memória, culpa e isolamento. A narrativa parte de um universo onírico aparentemente acolhedor, mas gradualmente revela tensões mais sombrias.
+          </p>
+          <p>
+            O contraste entre delicadeza visual e desconforto constante é um dos traços centrais do jogo. As emoções influenciam o combate, os cenários sugerem lembranças fragmentadas e a história avança de forma cada vez mais intensa.
+          </p>
+        </div>
+
+        <figure class="group-photo">
+          <span class="tape tape-left"></span>
+          <span class="tape tape-right"></span>
+          <img src="assets/images/omorigroup.webp" alt="Grupo de OMORI" />
+          <figcaption>Forever friends</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section shell" id="personagens" data-reveal>
+      <div class="section-title wide">
+        <span class="tag">personagens</span>
+        <h2 class="soft-glitch-title">O grupo principal</h2>
+
+      </div>
+
+      <div class="character-grid">
+        <article class="character-card">
+          <figure><img src="assets/images/omori.webp" alt="Omori" /></figure>
+          <h3>Omori</h3>
+          <p>Figura central do mundo onírico, marcada pelo silêncio e pela recusa em encarar o que está oculto.</p>
+        </article>
+
+        <article class="character-card">
+          <figure><img src="assets/images/aubrei.gif" alt="Aubrey" /></figure>
+          <h3>Aubrey</h3>
+          <p>Intensa e impulsiva, carrega conflitos que revelam o peso das mudanças dentro do grupo.</p>
+        </article>
+
+        <article class="character-card">
+          <figure><img src="assets/images/kel.gif" alt="Kel" /></figure>
+          <h3>Kel</h3>
+          <p>Espontâneo e otimista, funciona como o impulso que mantém o grupo em movimento.</p>
+        </article>
+
+        <article class="character-card">
+          <figure><img src="assets/images/hero.gif" alt="Hero" /></figure>
+          <h3>Hero</h3>
+          <p>Equilibrado e cuidadoso, assume naturalmente o papel de apoio entre os amigos.</p>
+        </article>
+
+        <article class="character-card something-card" id="somethingCard">
+          <figure><img src="assets/images/something.gif" alt="Something" /></figure>
+          <h3>Something</h3>
+          <p id="somethingMessage" aria-live="polite">. . .</p>
+        </article>
+
+        <article class="character-card" id="basilCard">
+          <figure><img id="basilImage" src="assets/images/basil.gif" alt="Basil" /></figure>
+          <h3>Basil</h3>
+          <p id="basilDescription">Sensível e reservado, guarda memórias decisivas para o desenrolar da história.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="sistema" data-reveal>
+      <div class="system-panel">
+        <div class="section-title system-title">
+          <div>
+            <span class="tag">sistema</span>
+            <h2 class="soft-glitch-title system-heading">Sistema de luta</h2>
+          </div>
+          <p>
+            O combate em OMORI se destaca pelo uso das emoções como parte central da estratégia, influenciando atributos e relações de vantagem entre os personagens.
+          </p>
+        </div>
+
+        <div class="system-layout">
+          <div class="system-copy">
+            <p>
+              Embora seja estruturado em turnos, o sistema de batalha ganha identidade própria ao transformar estados emocionais em mecânicas ativas. Isso faz com que cada confronto dependa não apenas de força, mas também de leitura tática e controle de estado.
+            </p>
+
+            <div class="system-points">
+              <article class="system-point">
+                <h3>Estratégia</h3>
+                <p>As emoções alteram dano, defesa, velocidade e precisão, mudando a dinâmica do combate.</p>
+              </article>
+
+              <article class="system-point">
+                <h3>Leitura</h3>
+                <p>Cada estado possui vantagens e desvantagens, exigindo decisões mais cuidadosas a cada turno.</p>
+              </article>
+
+            </div>
+          </div>
+
+          <figure class="emotion-chart taped-image">
+            <span class="tape chart-tape-a"></span>
+            <span class="tape chart-tape-b"></span>
+            <img src="assets/images/emotions.jpg" alt="Esquema das emoções de OMORI" />
+          </figure>
+        </div>
+
+        <div class="system-bottom">
+          <div class="emotion-cards emotion-cards-grid">
+            <article class="emotion-card emotion-neutral" data-emotion="neutral">
+              <img src="assets/images/neutral.gif" alt="Neutro" />
+              <h3>Neutro</h3>
+              <p>Sem modificadores emocionais.</p>
+            </article>
+
+            <article class="emotion-card emotion-happy" data-emotion="happy">
+              <img src="assets/images/happy.gif" alt="Feliz" />
+              <h3>Feliz</h3>
+              <p>Aumenta sorte e velocidade.</p>
+            </article>
+
+            <article class="emotion-card emotion-sad" data-emotion="sad">
+              <img src="assets/images/sad.gif" alt="Triste" />
+              <h3>Triste</h3>
+              <p>Eleva defesa e resistência.</p>
+            </article>
+
+            <article class="emotion-card emotion-angry" data-emotion="angry">
+              <img src="assets/images/angry.gif" alt="Bravo" />
+              <h3>Bravo</h3>
+              <p>Amplia o poder de ataque.</p>
+            </article>
+          </div>
+
+          <aside class="emotion-cycle">
+            <span class="cycle-tag">relações</span>
+            <h3>Cadeia emocional</h3>
+
+            <div class="cycle-row happy-row">
+              <strong>Feliz</strong>
+              <span>tem vantagem sobre</span>
+              <strong>Bravo</strong>
+            </div>
+
+            <div class="cycle-row angry-row">
+              <strong>Bravo</strong>
+              <span>tem vantagem sobre</span>
+              <strong>Triste</strong>
+            </div>
+
+            <div class="cycle-row sad-row">
+              <strong>Triste</strong>
+              <span>tem vantagem sobre</span>
+              <strong>Feliz</strong>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="mundos" data-reveal>
+      <div class="section-title wide">
+        <span class="tag">mundos</span>
+        <h2 class="soft-glitch-title">Mundos</h2>
+        <p>
+          Três núcleos centrais do universo de OMORI.
+        </p>
+      </div>
+
+      <div class="drawer-row">
+        <button class="drawer-box world-drawer" type="button" data-world="headspace">
+          <span>01</span>
+          <h3>Headspace</h3>
+        </button>
+
+        <button class="drawer-box world-drawer" type="button" data-world="faraway">
+          <span>02</span>
+          <h3>Faraway Town</h3>
+        </button>
+
+        <button class="drawer-box world-drawer" id="strangePlacesBtn" type="button" data-world="strange" aria-expanded="false" aria-controls="strangeAreasPanel">
+          <span>03</span>
+          <h3>Lugares estranhos</h3>
+        </button>
+      </div>
+
+      <div class="strange-areas-panel" id="strangeAreasPanel" aria-hidden="true">
+        <div class="strange-panel-title">
+          <span class="tag">lugares estranhos</span>
+          <h3>Áreas disponíveis</h3>
+          <p>Espaços que parecem existir fora das regras normais do sonho.</p>
+        </div>
+
+        <div class="strange-area-grid">
+          <a class="strange-area-card white-space-card" href="white-space.html">
+            <span class="area-number">???</span>
+            <figure>
+              <img src="assets/images/espacobranco.png" alt="Espaço Branco" />
+            </figure>
+            <div>
+              <h4>Espaço Branco</h4>
+              <p>Um lugar vazio, silencioso e branco. Algo foi deixado para trás.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p><strong><em>Sonhe enquanto pode, sonhador...</em></strong><br />Projeto fan-made, sem fins comerciais.</p>
+    <a href="#inicio">voltar ao topo ↑</a>
+  
+  <button class="footer-mirror" id="footer-mirror" type="button" aria-label="Examinar espelho flutuante">
+      <img src="assets/images/mirror_sprite.webp" alt="Espelho" class="mirror-sprite" />
+    </button>
+
+  <div class="official-links footer-links" aria-label="Links oficiais de OMORI">
+    <a href="https://www.omori-game.com/" target="_blank" rel="noopener noreferrer">Site oficial</a>
+    <a href="https://store.steampowered.com/app/1150690/OMORI/" target="_blank" rel="noopener noreferrer">Steam</a>
+    <a href="https://discord.com/invite/omori" target="_blank" rel="noopener noreferrer">Discord</a>
+  </div>
+
+</footer>
+  <div id="mirror-modal" class="mirror-modal" aria-hidden="true">
+    <div class="mirror-modal-box" role="dialog" aria-modal="true" aria-label="Espelho flutuante">
+      <button id="mirror-close" class="mirror-close" type="button" aria-label="Fechar">×</button>
+      <div class="mirror-scene">
+        <img id="mirror-view" src="" alt="Imagem refletida no espelho" />
+        <div id="mirror-dialog" class="mirror-dialog">
+          <img src="assets/images/output.png" alt="" class="mirror-dialog-box" />
+          <p id="mirror-dialog-text" class="mirror-dialog-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

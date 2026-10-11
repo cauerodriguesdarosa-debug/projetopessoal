@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMORI | Espaço Branco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/images/omori_icon.gif" type="image/gif" />
+  <link rel="stylesheet" href="white-space.css" />
+</head>
+<body id="top">
+  <div class="cursor-light" id="cursorLight"></div>
+  <div class="top-scroll-blur" aria-hidden="true"></div>
+
+  <header class="site-header">
+      <button class="white-lamp" id="whiteLamp" type="button" aria-label="Examinar lâmpada do Espaço Branco">
+        <img src="assets/images/lightbulb.webp" alt="Lâmpada pendurada" />
+      </button>
+    <div class="nav-pill white-nav-pill">
+      <a class="brand" href="#top">OMORI</a>
+
+      <nav class="nav white-nav" aria-label="Navegação do Espaço Branco">
+        <a href="#sobre">Sobre</a>
+      </nav>
+
+      <div class="music-box white-music-box" aria-label="Músicas do Espaço Branco">
+        <label class="sr-only" for="whiteMusicSelect">Escolher música</label>
+        <select id="whiteMusicSelect">
+          <option value="assets/audio/OMORI OST - 002 WHITE SPACE [Extended] [ZzaSOis0_VU].mp3">WHITE SPACE</option>
+          <option value="assets/audio/OMORI OST - 004 Spaces In-between [ljAyy-dhAz0](1).mp3">Spaces In-between</option>
+          <option value="assets/audio/OMORI OST - 012 Trees... - (320 Kbps).mp3">Trees...</option>
+          <option value="assets/audio/faraway-park-theme.mp3">By Your Side</option>
+          <option value="assets/audio/hobbeez-theme.mp3">Bargain Bin Boys</option>
+          <option value="assets/audio/OMORI OST - 092 Dear Little Brother.mp3">Dear Little Brother</option>
+          <option value="assets/audio/OMORI OST - 015 Tussle Among Trees.mp3">Tussle Among Trees</option>
+        </select>
+        <button class="sound-btn white-sound-btn" id="whiteSoundBtn" type="button" aria-label="Tocar ou pausar música">▶</button>
+      </div>
+
+      <a class="back-link" href="index.html#mundos">voltar</a>
+    </div>
+
+    <button class="mewo-dock" id="mewoBtn" type="button" aria-label="Mewo">
+      <img src="assets/images/mewo.gif" alt="Mewo" />
+      <span id="mewoMessage">Esperando algo acontecer?</span>
+    </button>
+  </header>
+
+  <main class="white-space-page">
+    <section class="white-room">
+      <div class="white-noise" aria-hidden="true"></div>
+      <div class="white-content">
+        <div class="white-text" id="sobre">
+          <span class="tag">lugares estranhos</span>
+          <h1 class="white-room-title soft-glitch-title">Espaço Branco</h1>
+          <p class="white-description">
+            O Espaço Branco é um lugar vazio e silencioso, marcado pela ausência de limites claros. Nele, quase nada existe além do próprio personagem, do silêncio e de uma lâmpada suspensa. A área funciona como um ponto de isolamento dentro do sonho, transmitindo calma, estranhamento e desconforto ao mesmo tempo.
+          </p>
+        </div>
+
+        <figure class="white-polaroid">
+          <span class="tape tape-left"></span>
+          <span class="tape tape-right"></span>
+          <img src="assets/images/espacobranco.png" alt="Espaço Branco" />
+          <figcaption>White Space</figcaption>
+        </figure>
+      </div>
+
+    </section>
+
+    <section class="white-extra-section" id="eventos">
+      <div class="white-extra-grid">
+        <article class="white-detail-card">
+          <span class="tag">eventos</span>
+                    <p>
+            O Espaço Branco funciona como um ponto de retorno e isolamento dentro do universo de OMORI. É um lugar em que o jogador encontra poucos objetos, mas cada elemento presente parece carregar um sentido maior do que aparenta.
+          </p>
+          <ul class="white-event-list">
+            <li><strong>Lâmpada:</strong> reforça a sensação de vazio e serve como uma das imagens mais marcantes do lugar.</li>
+            <li><strong>Notebook e objetos do quarto:</strong> ajudam a estabelecer rotina, repetição e a ideia de confinamento.</li>
+            <li><strong>Mewo:</strong> introduz uma presença familiar dentro de um espaço silencioso e quase imóvel.</li>
+            <li><strong>Alterações ao longo da história:</strong> o local passa a sugerir tensão crescente, deixando claro que o silêncio também esconde algo.</li>
+          </ul>
+        </article>
+
+        <article class="white-detail-card redhands-card">
+          <span class="tag">simbologia</span>
+          <h2 class="soft-glitch-title">Mãos vermelhas</h2>
+          <div class="redhands-layout">
+            <figure class="redhands-figure" id="redHandsFigure">
+              <img id="redHandsImage" src="assets/images/redhands.webp" alt="Mãos vermelhas do Espaço Branco" />
+              <div class="redhands-fallback" id="redHandsFallback">adicione “redhands.webp” em assets/images para exibir a imagem aqui</div>
+            </figure>
+
+            <div class="redhands-copy">
+              <p>
+                As mãos vermelhas aparecem como um elemento inquietante ligado à memória reprimida e ao desconforto que atravessa o Espaço Branco. Elas não funcionam apenas como decoração estranha: sua presença altera o tom do lugar e reforça a ideia de que existe algo sendo mantido à força fora de vista.
+              </p>
+              <p>
+                Dentro da leitura simbólica do jogo, essas mãos sugerem bloqueio, culpa e a tentativa constante de esconder ou conter lembranças que insistem em retornar.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbulb-modal" class="lightbulb-modal" aria-hidden="true">
+    <div class="lightbulb-modal-box" role="dialog" aria-modal="true" aria-label="Lâmpada do Espaço Branco">
+      <button id="lightbulb-close" class="lightbulb-close" type="button" aria-label="Fechar">×</button>
+      <div class="lightbulb-scene">
+        <img class="lightbulb-view" src="assets/images/lightbulb-view.webp" alt="Lâmpada do Espaço Branco" />
+        <div class="lightbulb-dialog">
+          <img src="assets/images/output.png" alt="" class="lightbulb-dialog-box" />
+          <p id="lightbulb-dialog-text" class="lightbulb-dialog-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" preload="none"></audio>
+  <audio id="mewoAudio" preload="none" src="assets/audio/omori-meow.mp3"></audio>
+  <audio id="textboxAudio" preload="none" src="assets/audio/Talking (Text Box) _ OMORI SFX [kc4WYXwDgV4].mp3"></audio>
+  <script src="white-space.js"></script>
+</body>
+</html>
